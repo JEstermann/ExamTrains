@@ -26,6 +26,15 @@ public class Car {
     public String toString() {
        return("Voiture "+numero+"/siège "+carclasse); // continuer siege apres
     }
+    
+    public Seat search(SearchSeatCriteria criteria){
+        for (Seat seat : seat) {
+            if (criteria.match(seat)) {
+                return seat;
+            }
+        }
+        return null;
+    }
 
     public int getId() {
         return this.numero;

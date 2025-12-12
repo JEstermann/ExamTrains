@@ -22,8 +22,8 @@ public class SeatTest {
     public void SeatShouldBeBookedAfterBook(){
         List<Integer> ids =IntStream.rangeClosed(1, 10)
                 .boxed()
-                .map((n) -> {return n;}).toList();
-        Seat s1 = new Seat(ids.getFirst());
+                .toList();
+        Seat s1 = new Seat(ids.get(0));
         s1.book();
         assertEquals(0,s1.isFree());
     }
