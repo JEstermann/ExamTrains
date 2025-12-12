@@ -1,4 +1,5 @@
 package esgi.trains;
+import java.util.List;
 
 public class Train {
     private List<Car> cars;

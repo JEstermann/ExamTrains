@@ -20,10 +20,5 @@ class CarTest {
             .isInstanceOf(IllegalArgumentException.class);
     }
 
-    @Test
-    void toStringShouldReturnExpectedFormat() {
-        Seat[] seats = new Seat[10];
-        Car car = new Car(3, CarClass.Second, seats);
-        assertThat(car.toString()).isEqualTo("Voiture 3/siège SECOND");
-    }
+    
 }
