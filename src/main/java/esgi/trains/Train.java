@@ -7,7 +7,5 @@ public class Train {
         cars.add(car);
     }
 
-    public record Ticket(int carId, int seatId){
-
-    }
+    public record Ticket(int carId, int seatId){}
 }

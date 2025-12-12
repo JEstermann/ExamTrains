@@ -6,12 +6,9 @@ public class Seat {
     private int seatId;
     private SeatType type;
     private Status status;
-    private CarClass carClass;
 
-    public Seat(){
-        this.seatId = IntStream.rangeClosed(1, 10)
-                .boxed()
-                .map((n) -> {}).toList();
+    public Seat(int id){
+        this.seatId = id;
         this.status = Status.Free;
     }
 
