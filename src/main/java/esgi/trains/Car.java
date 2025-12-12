@@ -1,19 +1,21 @@
 package esgi.trains;
 
+import java.util.List;
+
 public class Car {
     private int numero;
     private CarClass carclasse;
-    private Seat[] siege = new Seat[10];
+    private List<Seat> sieges;
 
 
 
-    Car(int numero,CarClass carclasse,Seat[] siege){
+    public Car(int numero,CarClass carclasse,List<Seat> sieges){
         if (numero<1 || numero>4){
             throw new IllegalArgumentException("Numéro de voiture invalide");
         }
         this.numero = numero;
         this.carclasse=carclasse;
-        this.siege=siege;
+        this.sieges=sieges;
     }
 
     boolean checkClasseCar(CarClass carclasse){
@@ -25,4 +27,7 @@ public class Car {
        return("Voiture "+numero+"/siège "+carclasse); // continuer siege apres
     }
 
+    public int getId() {
+        return this.numero;
+    }
 }
